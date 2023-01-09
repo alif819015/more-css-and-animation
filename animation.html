@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        @keyframes sliding {
+            0%{
+                background-color: yellow;
+                left: 0px;
+                top: 0;
+               
+            }
+            25%{
+                top: 325px;
+                background-color: red;
+                transform: scale(.5)
+            }
+            50%{
+               top: 0; 
+               background-color: yellow;
+               transform: scale(1)
+               
+            }
+            75%{
+                top: 325px;
+                background-color: red;
+                transform: scale(.5)
+            }
+            100%{
+                background-color: yellow;
+                left: 700px;
+                top: 0;
+                transform: scale()
+            }
+        }
+        .stage{
+            width: 800px;
+            height: 400px;
+            background-color: rgb(185, 135, 250);
+        }
+        .ball{
+            width: 100px;
+            height: 100px;
+            background-color: lightgreen;
+            border-radius: 50px;
+            position: relative;
+            animation: sliding 2s ease-in-out 0.5s infinite alternate;
+            animation-play-state: running;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Lat's explore Animation</h1>
+    <div class="stage">
+        <div class="ball"></div>
+    </div>
+</body>
+</html>
